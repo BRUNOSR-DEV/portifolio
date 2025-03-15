@@ -94,7 +94,13 @@
     $('.image-popup').magnificPopup({
       type: 'image',
       gallery:{
-        enabled:true
+        enabled:true,
+        duration: 100,
+      },
+      image: {
+        titleSrc: function(item) {
+          return '<h4>' + item.el.attr('data-title') + '</h4>'; // Exibir o texto dentro de um <h4>
+        }
       }
     });
     
