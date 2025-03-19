@@ -874,18 +874,25 @@ p {
 /*===========================
         4.SERVICES css 
 ===========================*/
+section {
+  background-color: black !important;
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .services-area {
     padding-top: 90px;
-    padding-bottom: 100px; } }
+    padding-bottom: 100px;
+    background-color: #ff0000 !important;
+  } }
 @media (max-width: 767px) {
   .services-area {
     padding-top: 70px;
-    padding-bottom: 80px; } }
+    padding-bottom: 80px; 
+    background-color: #ff0000 !important;
+  } }
 
 .single-service {
-  background-color: #fff;
-  border: 1px solid #eceff8;
+  background-color: #090909;
+  border: 1px solid #f90202;
   border-radius: 5px;
   padding: 25px;
   -webkit-transition: all 0.3s ease-out 0s;
@@ -905,7 +912,7 @@ p {
     .single-service .service-content .service-title a {
       font-size: 22px;
       font-weight: 600;
-      color: #32333c;
+      color: #ffffff;
       margin-bottom: 20px;
       -webkit-transition: all 0.3s ease-out 0s;
       -moz-transition: all 0.3s ease-out 0s;
