@@ -877,6 +877,8 @@ p {
 section {
   background-color: black !important;
 }
+
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .services-area {
     padding-top: 90px;
@@ -893,7 +895,7 @@ section {
 
 .single-service {
   background-color: black;
-  border: 1px solid #f90202;
+  border: 1px solid rgb(9, 9, 9);
   border-radius: 5px;
   padding: 25px;
   transition: all 0.3s ease-out 0s;
@@ -991,6 +993,11 @@ section {
 /*===========================
         5.WORK css 
 ===========================*/
+#popup-images {
+  max-height: 80vh; /* Ajuste conforme necessário */
+  overflow-y: auto;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .work-area {
     padding-top: 90px;
@@ -1001,7 +1008,10 @@ section {
     padding-bottom: 80px; } }
 
 .single-work {
-  position: relative; }
+  position: relative; 
+  border: 1px solid rgb(7, 7, 7);
+}
+  
   .single-work .work-image img {
     width: 100%; }
   .single-work .work-overlay {

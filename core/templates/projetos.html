@@ -20,7 +20,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-work text-center mt-30">
                         <div class="work-image">
-                            <img src="{% static 'images/projeto_fusion/imagem.webp' %}" width="360" height="360" alt="work">
+                            <img  width="360" height="360" src="{% static 'images/projeto_fusion/imag.png' %}"  alt="work">
                         </div>
                         <div class="work-overlay">
                             <div class="work-content">
@@ -28,9 +28,20 @@
                                 <ul>
                                     <li>
                                         <a style="color: black;" class="image-popup" href="#" 
-                                            data-images="{% static 'images/projeto_fusion/inicio.png' %}, 
+                                            data-images="
+                                                         {% static 'images/projeto_fusion/tela_login.png' %},
+                                                         {% static 'images/projeto_fusion/inicio.png' %}, 
                                                          {% static 'images/projeto_fusion/servicos.png' %}, 
-                                                         {% static 'images/projeto_fusion/servicos_2.png' %}" 
+                                                         {% static 'images/projeto_fusion/servicos_2.png' %},
+                                                         {% static 'images/projeto_fusion/servicos_3.png' %},
+                                                         {% static 'images/projeto_fusion/equipe.png' %},
+                                                         {% static 'images/projeto_fusion/preco_chamada.png' %},
+                                                         {% static 'images/projeto_fusion/testemunhas.png' %},
+                                                         {% static 'images/projeto_fusion/contato.png' %},
+                                                         {% static 'images/projeto_fusion/rodape.png' %},
+                                                         {% static 'images/projeto_fusion/adm_login.png' %},
+                                                         {% static 'images/projeto_fusion/area_adm.png' %},
+                                                         " 
                                             data-title="Descrição da imagem">
                                             <i class="lni-plus"></i>
                                          </a>
@@ -41,7 +52,7 @@
                                          </a>
                                     </li>
                                 </ul>
-                                <p style="color:black;">Fusion é um projeto web desenvolvido com Python, Django e PostgreSQL, focado em gestão e administração de dados. <!--O sistema inclui uma área de login segura, um painel administrativo completo e integração com um banco de dados robusto. Através da interface administrativa, é possível realizar operações CRUD (Criar, Ler, Atualizar e Deletar) de forma intuitiva, garantindo eficiência na gestão das informações.--></p>
+                                <p style=" color:black;">Fusion é um projeto web desenvolvido com Python, Django e PostgreSQL, focado em gestão e administração de dados. <!--O sistema inclui uma área de login segura, um painel administrativo completo e integração com um banco de dados robusto. Através da interface administrativa, é possível realizar operações CRUD (Criar, Ler, Atualizar e Deletar) de forma intuitiva, garantindo eficiência na gestão das informações.--> </p>
                             </div>
                         </div>
                     </div>
@@ -70,9 +81,8 @@
                             images.forEach(image => {
                                 const img = document.createElement('img');
                                 img.src = image.trim(); 
-                                img.style.maxWidth = '80%';
-                                img.style.maxHeight = '80vh';
-                                img.style.margin = '10px';
+                                img.style.maxWidth = '100%'; 
+                                img.style.marginBottom = '10px';
                                 popupImages.appendChild(img);
                             });
             
