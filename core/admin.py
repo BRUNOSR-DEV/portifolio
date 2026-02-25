@@ -1,3 +1,11 @@
 from django.contrib import admin
+from .models import Projeto, Certificado
 
-# Register your models here.
+@admin.register(Projeto)
+class ProjetoAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'categoria', 'link_github') # Colunas que aparecem na lista
+    search_fields = ('nome', 'categoria') # Barra de busca
+
+@admin.register(Certificado)
+class CertificadoAdmin(admin.ModelAdmin):
+    list_display = ('titulo_certificado',)

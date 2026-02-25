@@ -1354,7 +1354,7 @@ p.form-message.success, p.form-message.error {
        9.FOOTER css 
 ===========================*/
 .footer-widget {
-  background-color: #152136; }
+  background-color: #141313; }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .footer-widget {
       padding-top: 100px;
@@ -1382,8 +1382,8 @@ p.form-message.success, p.form-message.error {
       line-height: 74px;
       text-align: center;
       border-radius: 50%;
-      color: #bebebe;
-      background-color: #1c2940;
+      color: #ff0000;
+      background-color: #000000;
       -webkit-transition: all 0.3s ease-out 0s;
       -moz-transition: all 0.3s ease-out 0s;
       -ms-transition: all 0.3s ease-out 0s;
@@ -1400,7 +1400,7 @@ p.form-message.success, p.form-message.error {
         color: #fff; }
 
 .footer-copyright {
-  background-color: #1c2940; }
+  background-color: #000000; }
   .footer-copyright .copyright-text p {
     color: #fff; }
 
