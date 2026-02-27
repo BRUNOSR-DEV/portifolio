@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Projeto
+from .models import Projeto, Certificado
 
 from django.views.generic import TemplateView
 from django.urls import reverse_lazy
@@ -14,4 +14,7 @@ class IndexView(TemplateView):
         context = super().get_context_data(**kwargs)
 
         context['projetos'] = Projeto.objects.all() 
+
+        context['certificados'] = Certificado.objects.all()
+        
         return context

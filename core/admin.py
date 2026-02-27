@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Projeto, Certificado, ImagemProjeto
+from .models import Projeto, Certificado, ImagemProjeto, Habilidade
 
 class ImagemProjetoInline(admin.TabularInline):
     model = ImagemProjeto
@@ -7,10 +7,14 @@ class ImagemProjetoInline(admin.TabularInline):
 
 @admin.register(Projeto)
 class ProjetoAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'categoria', 'link_github') # Colunas que aparecem na lista
+    list_display = ('nome', 'categoria', 'link_github') # Barra de visualização 
     inlines = [ImagemProjetoInline]
-    search_fields = ('nome', 'categoria') # Barra de busca
+    search_fields = ('nome', 'categoria') 
 
 @admin.register(Certificado)
 class CertificadoAdmin(admin.ModelAdmin):
     list_display = ('titulo_certificado',)
+
+@admin.register(Habilidade)
+class HabilidadeAdmin(admin.ModelAdmin):
+    list_display = ('titulo_hab',)

@@ -12,138 +12,50 @@
                             <p>Minha jornada na área de tecnologia é marcada por um compromisso constante com o aprendizado e a busca por excelência. Essas certificações e formações acadêmicas demonstram meu comprometimento em me manter atualizado com as últimas tendências e tecnologias do mercado, além de minha capacidade de aplicar esses conhecimentos em projetos práticos e desafiadores.</p>
                         </div> <!-- section title -->
                     </div>
-                </div> <!-- row -->
-                
+                </div> <!-- row -->  
             </div> <!-- row -->
+
+            
+            <!--Certificado Python-->
+            
             <div class="row">
+
+                {% for cert in certificados %}
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-work text-center mt-30">
                         <div class="work-image">
-                            <img width="360" height="360" src="{% static 'images/certificados/ads.png' %}" alt="work">
+                            <img width="360" height="360" src="{{ cert.capa.url }}" alt="work">
                         </div>
                         <div  class="work-overlay">
                             <div class="work-content">
                                 <h3 style="color: black;"  class="work-title">
-                                    Tecnólogo em Análise e Desenvolvimento de Sistemas</h3>
+                                    {{ cert.titulo_certificado }}</h3>
                                 <ul>
-                                    <li ><a style="color: black;" class="image-popup"  href="{% static 'images/certificados/ads.png' %}" data-title="Descrição da imagem" >
+                                    <li ><a style="color: black;" class="image-popup"  href="{{ cert.imagem.url }}" data-title="{{  cert.titulo_certificado }}" >
                                     <i class="lni-plus"></i></a></li>
 
-                                    <li><a style="color: black;" href="https://cse.webapp.abaris.com.br/diploma/221.221.ef0144626a52"><i class="lni-link"></i></a></li>
+                                    <li><a style="color: black;" href="{{ cert.link }}"><i class="lni-link"></i></a></li>
                                 </ul>
-                                <p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum sit iusto, corrupti asperiores park </p>
+                                <p style="color:black;">{{ cert.descricao_breve }} </p>
                             </div>
                         </div>
                     </div> <!-- single work -->
                 </div>
-                
-                <!--Certificado Python-->
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-work text-center mt-30">
-                        <div class="work-image">
-                            <img width="360" height="360" src="{% static 'images/certificados/py.png' %}" alt="work">
-                        </div>
-                        <div class="work-overlay">
-                            <div class="work-content">
-                                <h3 class="work-title">Programação em Python do básico ao avançado</h3>
-                                <ul>
-                                    <li><a class="image-popup" href="{% static 'images/certificados/py.png' %}"><i class="lni-plus"></i></a></li>
-                                    <li><a href="https://www.udemy.com/certificate/UC-e2199e48-968b-4e5c-b060-7ff3b53ef1f3/">
-                                        <i class="lni-link"></i></a></li>
-                                </ul>
-                                <p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum sit iusto, corrupti asperiores park </p>
-                            </div>
-                        </div>
-                    </div> <!-- single work -->
-                </div>
-
-
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-work text-center mt-30">
-                        <div class="work-image">
-                            <img width="360" height="360" src="{% static 'images/certificados/django.png' %}" alt="work">
-                        </div>
-                        <div class="work-overlay">
-                            <div class="work-content">
-                                <h3 class="work-title">Programação Web com Python e Django Framework: Essencial</h3>
-                                <ul>
-                                    <li><a class="image-popup" href="{% static 'images/certificados/django.png' %}"><i class="lni-plus"></i></a></li>
-                                    <li><a href="https://www.udemy.com/certificate/UC-d5b04ed6-55d3-4577-bd9f-32cd1cc9d75c/">
-                                        <i class="lni-link"></i></a></li>
-                                </ul>
-                                <p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum sit iusto, corrupti asperiores park </p>
-                            </div>
-                        </div>
-                    </div> <!-- single work -->
-                </div>
-
-
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-work text-center mt-30">
-                        <div class="work-image">
-                            <img width="360" height="360" src="{% static 'images/certificados/metodos.png' %}" alt="work">
-                        </div>
-                        <div class="work-overlay">
-                            <div class="work-content">
-                                <h3 class="work-title">Métodos Ágeis de A a Z</h3>
-                                <ul>
-                                    <li><a class="image-popup" href="{% static 'images/certificados/metodos.png' %}"><i class="lni-plus"></i></a></li>
-                                    <li><a href="https://www.udemy.com/certificate/UC-b4d49038-8197-446e-a140-db5cccd17aba/">
-                                        <i class="lni-link"></i></a></li>
-                                </ul>
-                                <p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum sit iusto, corrupti asperiores park </p>
-                            </div>
-                        </div>
-                    </div> <!-- single work -->
-                </div>
-
-
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-work text-center mt-30">
-                        <div class="work-image">
-                            <img width="360" height="360" src="{% static 'images/certificados/ti.png' %}" alt="work">
-                        </div>
-                        <div class="work-overlay">
-                            <div class="work-content">
-                                <h3 class="work-title">Certificado T.I- Tecnologia da informação. </h3>
-                                <ul>
-                                    <li><a class="image-popup" href="{% static 'images/certificados/ti.png' %}"><i class="lni-plus"></i></a></li>
-                                    <li><a href="#"><i class="lni-link"></i></a></li>
-                                </ul>
-                                <p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum sit iusto, corrupti asperiores park </p>
-                            </div>
-                        </div>
-                    </div> <!-- single work -->
-                </div>
-
-
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-work text-center mt-30">
-                        <div class="work-image">
-                            <img src="{% static 'images/em_breve.png' %}" alt="work">
-                        </div>
-                        <div class="work-overlay">
-                            <div class="work-content">
-                                <h3 class="work-title">Design de Produto</h3>
-                                <ul>
-                                    <li><a class="image-popup" href="{% static 'images/em_breve.png' %}"><i class="lni-plus"></i></a></li>
-                                    <li><a href="#"><i class="lni-link"></i></a></li>
-                                </ul>
-
-                            </div>
-                        </div>
-                    </div> <!-- single work -->
-                </div>
+                {% endfor %}
 
 
             </div> <!-- row -->
-            <div class="row">
+            
+            <!--BOTÃO PARA MAIS CERTIFICADOS, QUANDO TIVER E HÁ DE TER-->
+            <!--<div class="row">
                 <div class="col-lg-12">
                     <div class="work-more text-center mt-50">
                         <a class="main-btn" href="#">Mais Certificados</a>
-                    </div> <!-- work more -->
+                    </div> 
                 </div>
-            </div> <!-- row -->
+            </div> -->
+            
+
         </div> <!-- container -->
     </section>
 
