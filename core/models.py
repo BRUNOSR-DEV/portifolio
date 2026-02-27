@@ -35,5 +35,5 @@ class Certificado(models.Model):
 
 class Habilidade(models.Model):
     titulo_hab = models.CharField(max_length=80)
-    descricao_breve = models.CharField(max_length=300)
+    descricao_breve = models.TextField(max_length=300)
     icone = models.CharField(max_length=50, help_text="Insira a classe do ícone (ex: 'lni lni-python')")

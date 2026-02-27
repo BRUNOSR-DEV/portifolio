@@ -14,84 +14,22 @@
             <wbr>
 
             <div class="row justify-content-center">
-
-                <div class="col-lg-4 col-md-6 col-sm-8">
-                    <div class="single-service text-center mt-30">
-                        <div class="service-icon">
-                            <i class="lni-vector"></i>
-                            <!--<i class="lni-color-pallet"></i>-->
-                        </div>
-                        <div class="service-content">
-                            <h4 class="service-title"><a href="#contact">APIs REST</a></h4>
-                            <p>Interface que utiliza o protocolo HTTP. Desenvolvimento de lógica mais complexa, autenticação, integração com serviços externos, processamento de dados, entre outros.</p>
-                        </div>
-                    </div> <!-- single service -->
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-8">
-                    <div class="single-service text-center mt-30">
-                        <div class="service-icon">
-                            <i class="lni-database"></i>
-                           <!-- <i class="lni-vector"></i>
-                            <i class="lni-mobile"></i>-->
-                        </div>
-                        <div class="service-content">
-                            <h4 class="service-title"><a href="#">Modelagem e Gerenciamento de Banco de Dados</a></h4>
-                            <p>Processo de estruturação de dados para garantir organização, eficiência e integridade. Utilizando SGBDs garanto a recuperação, segurança e desempenho dos dados.</p>
-                        </div>
-                    </div> <!-- single service -->
-                </div>
                 
-
+                {% for hab in habilidades %}
                 <div class="col-lg-4 col-md-6 col-sm-8">
                     <div class="single-service text-center mt-30">
                         <div class="service-icon">
-                            
-                            <i class="lni-website"></i>
+                            <i class="{{ hab.icone }}"></i>
                         </div>
                         <div class="service-content">
-                            <h4 class="service-title"><a href="#">Desenvolvimento Web</a></h4>
-                            <p>Desenvolvimento de sites e aplicações para a internet. Aplicações de conteúdo estático ou dinâmico, utilizando Python e Django.</p>
+                            <h4 class="service-title"><a href="#contact">{{ hab.titulo_hab }}</a></h4>
+                            <p>{{ hab.descricao_breve }}</p>
                         </div>
-                    </div> <!-- single service -->
+                    </div> 
                 </div>
+                {% endfor %}
 
-                <div class="col-lg-4 col-md-6 col-sm-8">
-                    <div class="single-service text-center mt-30">
-                        <div class="service-icon">
-                            <i class="lni-cog"></i>
-                        </div>
-                        <div class="service-content">
-                            <h4 class="service-title"><a href="#">Automação e Scripts</a></h4>
-                            <p>Uso de tecnologia para executar tarefas repetitivas sem intervenção manual, aumentando eficiência, produtividade e reduzindo erros.</p>
-                        </div>
-                    </div> <!-- single service -->
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-8">
-                    <div class="single-service text-center mt-30">
-                        <div class="service-icon">
-                            <i class="lni-pencil"></i>
-                        </div>
-                        <div class="service-content">
-                            <h4 class="service-title"><a href="#">Gestão de Software</a></h4>
-                            <p>Com métodos ágeis o desenvolvimento de software prioriza a flexibilidade, colaboração e entregas contínuas. Utilizando de métodos que garantem maior eficiência e qualidade nos projetos.</p>
-                        </div>
-                    </div> <!-- single service -->
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-8">
-                    <div class="single-service text-center mt-30">
-                        <div class="service-icon">
-                            <i class="lni-lock"></i>
-                        </div>
-                        <div class="service-content">
-                            <h4 class="service-title"><a href="#">Segurança e Performance</a></h4>
-                            <p>Métodos de segurança são cruciais para garantir a robustez e a confiabilidade da sua aplicação. Utilizando autenticação, autorização, proteção contra ataques, entre outras práticas.</p>
-                        </div>
-                    </div> <!-- single service -->
-                </div>
-
+                
             </div> <!-- row -->
         </div> <!-- container -->
     </section>
